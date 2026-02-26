@@ -1,4 +1,7 @@
-﻿Command:
+﻿Repo Name: cars-dealership
+Project Name: Cars Dealership Full Stack Development Capstone Project
+
+Command:
 docker compose ps django-backend
 
 Output:
@@ -24,3 +27,4 @@ dealership-django  | [26/Feb/2026 04:57:58] "GET /api/dealers/ HTTP/1.1" 200 102
 dealership-django  | [26/Feb/2026 04:57:58] "GET /api/dealers/2/ HTTP/1.1" 200 184
 dealership-django  | [26/Feb/2026 04:57:58] "GET /api/dealers/?state=KS HTTP/1.1" 200 186
 dealership-django  | [26/Feb/2026 04:57:58] "GET /api/cars/ HTTP/1.1" 200 2500
+

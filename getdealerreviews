@@ -1,0 +1,5 @@
+﻿Command:
+curl http://localhost:8000/api/dealers/1/reviews/
+
+Output:
+{"reviews": [{"_id": "699fd29d78c56ce94081b390", "dealer_id": 1, "name": "student1", "review": "Fantastic services and very friendly staff", "purchase_date": "2026-02-26", "car_make": "Toyota", "car_model": "Camry", "car_year": "2023", "sentiment": "positive", "created_at": "2026-02-26T04:57:01.910Z"}]}

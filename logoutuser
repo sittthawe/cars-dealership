@@ -1,0 +1,5 @@
+﻿Command:
+curl -c cookies.txt -b cookies.txt -X POST http://localhost:8000/api/logout/
+
+Output:
+{"authenticated": false}

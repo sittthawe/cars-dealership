@@ -1,0 +1,7 @@
+﻿Task5 Login command and output:
+curl -c cookies.txt -b cookies.txt -X POST http://localhost:8000/api/login/ -H "Content-Type: application/json" -d "{\"username\":\"student1\",\"password\":\"Password123!\"}"
+{"username": "student1", "authenticated": true}
+
+Task6 Logout command and output:
+curl -c cookies.txt -b cookies.txt -X POST http://localhost:8000/api/logout/
+{"authenticated": false}

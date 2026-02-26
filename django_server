@@ -1,0 +1,26 @@
+﻿Command:
+docker compose ps django-backend
+
+Output:
+NAME                IMAGE                           COMMAND                  SERVICE          CREATED          STATUS          PORTS
+dealership-django   car_dealership-django-backend   "sh -c 'python manag…"   django-backend   16 minutes ago   Up 16 minutes   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+
+Command:
+docker compose logs django-backend --tail 15
+
+Output:
+dealership-django  | [26/Feb/2026 04:51:30] "GET /api/cars/ HTTP/1.1" 200 2500
+dealership-django  | [26/Feb/2026 04:52:15] "GET /api/dealers/?state=KS HTTP/1.1" 200 186
+dealership-django  | Unauthorized: /api/login/
+dealership-django  | [26/Feb/2026 04:55:10] "POST /api/login/ HTTP/1.1" 401 32
+dealership-django  | Unauthorized: /api/login/
+dealership-django  | [26/Feb/2026 04:55:34] "POST /api/login/ HTTP/1.1" 401 32
+dealership-django  | [26/Feb/2026 04:56:47] "POST /api/login/ HTTP/1.1" 200 47
+dealership-django  | [26/Feb/2026 04:57:01] "POST /api/reviews/ HTTP/1.1" 201 301
+dealership-django  | [26/Feb/2026 04:57:58] "POST /api/login/ HTTP/1.1" 200 47
+dealership-django  | [26/Feb/2026 04:57:58] "POST /api/logout/ HTTP/1.1" 200 24
+dealership-django  | [26/Feb/2026 04:57:58] "GET /api/dealers/1/reviews/ HTTP/1.1" 200 304
+dealership-django  | [26/Feb/2026 04:57:58] "GET /api/dealers/ HTTP/1.1" 200 1029
+dealership-django  | [26/Feb/2026 04:57:58] "GET /api/dealers/2/ HTTP/1.1" 200 184
+dealership-django  | [26/Feb/2026 04:57:58] "GET /api/dealers/?state=KS HTTP/1.1" 200 186
+dealership-django  | [26/Feb/2026 04:57:58] "GET /api/cars/ HTTP/1.1" 200 2500

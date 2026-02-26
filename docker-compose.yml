@@ -1,0 +1,71 @@
+services:
+  mongodb:
+    image: mongo:7
+    container_name: dealership-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: dealership-mongo-express
+    restart: unless-stopped
+    depends_on:
+      - mongodb
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongodb
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin
+
+  node-api:
+    build: ./backend/node_api
+    container_name: dealership-node-api
+    restart: unless-stopped
+    depends_on:
+      - mongodb
+    environment:
+      PORT: 3001
+      MONGO_URI: mongodb://mongodb:27017/dealership
+    ports:
+      - "3001:3001"
+
+  sentiment-service:
+    build: ./backend/sentiment_service
+    container_name: dealership-sentiment
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+
+  django-backend:
+    build: ./backend/django_service
+    container_name: dealership-django
+    restart: unless-stopped
+    depends_on:
+      - node-api
+      - sentiment-service
+    environment:
+      DJANGO_SECRET_KEY: dev-secret-key-change-me
+      DEBUG: 1
+      ALLOWED_HOSTS: "*"
+      NODE_API_BASE: http://node-api:3001
+      SENTIMENT_API_BASE: http://sentiment-service:5001
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend/react_app
+    container_name: dealership-frontend
+    restart: unless-stopped
+    depends_on:
+      - django-backend
+    environment:
+      VITE_PROXY_TARGET: http://django-backend:8000
+    ports:
+      - "5173:5173"
+
+volumes:
+  mongo_data:

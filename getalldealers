@@ -1,0 +1,5 @@
+﻿Command:
+curl http://localhost:8000/api/dealers/
+
+Output:
+{"dealers": [{"_id": "699fc9897aba8e3f96c78704", "dealer_id": 2, "name": "Golden Gate Cars", "state": "CA", "city": "San Francisco", "address": "200 Market St", "phone": "415-555-0102"}, {"_id": "699fc9897aba8e3f96c78706", "dealer_id": 4, "name": "Sunshine Autos", "state": "FL", "city": "Miami", "address": "400 Ocean Dr", "phone": "305-555-0104"}, {"_id": "699fc9897aba8e3f96c78707", "dealer_id": 5, "name": "Great Lakes Auto Hub", "state": "IL", "city": "Chicago", "address": "500 Lake Shore Dr", "phone": "312-555-0105"}, {"_id": "699fd172a024a174779fa364", "dealer_id": 6, "address": "600 Douglas Ave", "city": "Wichita", "name": "Prairie Auto Center", "phone": "316-555-0106", "state": "KS"}, {"_id": "699fc9897aba8e3f96c78703", "dealer_id": 1, "name": "Empire Auto NYC", "state": "NY", "city": "New York", "address": "100 5th Ave", "phone": "212-555-0101"}, {"_id": "699fc9897aba8e3f96c78705", "dealer_id": 3, "name": "Lone Star Motors", "state": "TX", "city": "Dallas", "address": "300 Elm St", "phone": "972-555-0103"}]}

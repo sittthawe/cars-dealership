@@ -1,0 +1,5 @@
+﻿Command:
+curl "http://localhost:8000/api/dealers/?state=KS"
+
+Output:
+{"dealers": [{"_id": "699fd172a024a174779fa364", "dealer_id": 6, "address": "600 Douglas Ave", "city": "Wichita", "name": "Prairie Auto Center", "phone": "316-555-0106", "state": "KS"}]}

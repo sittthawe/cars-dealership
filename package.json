@@ -1,0 +1,16 @@
+{
+  "name": "car_dealership",
+  "version": "1.0.0",
+  "description": "This repository contains a complete full-stack capstone implementation for a U.S. car dealership platform using a microservices architecture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "playwright": "^1.58.2"
+  }
+}

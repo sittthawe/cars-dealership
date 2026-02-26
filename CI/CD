@@ -1,0 +1,4 @@
+﻿GitHub Actions run output is not available locally because this workspace is not connected to a GitHub repository with workflow run history.
+Run this in your GitHub repo to capture logs:
+gh run list
+gh run view --log

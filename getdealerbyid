@@ -1,0 +1,5 @@
+﻿Command:
+curl http://localhost:8000/api/dealers/2/
+
+Output:
+{"dealer": {"_id": "699fc9897aba8e3f96c78704", "dealer_id": 2, "name": "Golden Gate Cars", "state": "CA", "city": "San Francisco", "address": "200 Market St", "phone": "415-555-0102"}}

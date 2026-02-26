@@ -9,6 +9,9 @@ dist/
 
 # Env
 .env
+cookies.txt
+login_payload.json
+payload.json
 
 # OS
 .DS_Store

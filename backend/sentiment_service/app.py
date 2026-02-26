@@ -30,6 +30,13 @@ def health():
     return jsonify({'status': 'ok'})
 
 
+@app.get('/analyze')
+def analyze_get():
+    text = request.args.get('text', '')
+    sentiment = classify_sentiment(text)
+    return jsonify({'sentiment': sentiment, 'text': text})
+
+
 @app.post('/analyze')
 def analyze():
     payload = request.get_json(silent=True) or {}

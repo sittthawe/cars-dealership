@@ -256,7 +256,7 @@ function DealersSection({
                       </div>
                     </div>
                     <button className="btn btn-primary" type="submit" disabled={busy}>
-                      Submit review
+                      Post Review
                     </button>
                   </form>
                 ) : (

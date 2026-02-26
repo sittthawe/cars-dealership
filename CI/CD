@@ -1,4 +1,31 @@
-﻿GitHub Actions run output is not available locally because this workspace is not connected to a GitHub repository with workflow run history.
-Run this in your GitHub repo to capture logs:
-gh run list
-gh run view --log
+﻿Repo: sittthawe/cars-dealership
+Workflow: ci
+Run ID: 22431065749
+Status: completed
+Conclusion: success
+Branch: main
+Commit: 9f92ee9f53710bc2dfdc0c00a5a9a395a7aa097b
+Run URL: https://github.com/sittthawe/cars-dealership/actions/runs/22431065749
+
+Jobs and steps:
+- Job: node-checks | Status: completed | Conclusion: success
+  - Step: Set up job | Status: completed | Conclusion: success
+  - Step: Run actions/checkout@v4 | Status: completed | Conclusion: success
+  - Step: Run actions/setup-node@v4 | Status: completed | Conclusion: success
+  - Step: Install node-api dependencies | Status: completed | Conclusion: success
+  - Step: Syntax check node-api | Status: completed | Conclusion: success
+  - Step: Install frontend dependencies | Status: completed | Conclusion: success
+  - Step: Build frontend | Status: completed | Conclusion: success
+  - Step: Post Run actions/setup-node@v4 | Status: completed | Conclusion: success
+  - Step: Post Run actions/checkout@v4 | Status: completed | Conclusion: success
+  - Step: Complete job | Status: completed | Conclusion: success
+- Job: python-checks | Status: completed | Conclusion: success
+  - Step: Set up job | Status: completed | Conclusion: success
+  - Step: Run actions/checkout@v4 | Status: completed | Conclusion: success
+  - Step: Run actions/setup-python@v5 | Status: completed | Conclusion: success
+  - Step: Install Django dependencies | Status: completed | Conclusion: success
+  - Step: Install sentiment dependencies | Status: completed | Conclusion: success
+  - Step: Compile Python sources | Status: completed | Conclusion: success
+  - Step: Post Run actions/setup-python@v5 | Status: completed | Conclusion: success
+  - Step: Post Run actions/checkout@v4 | Status: completed | Conclusion: success
+  - Step: Complete job | Status: completed | Conclusion: success
